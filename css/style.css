@@ -1,0 +1,250 @@
+body{
+    background-color: #012b36;
+    /* original background: #015367 */
+    /* alternate background 1: #161A22;*/
+    /* alternate background 2: #202833;*/
+    /* alternate background 3: #303E51 */
+    /* alternate highlights color: #66FDF2 */
+}
+
+.content{
+    display: none;
+    opacity: 0;
+}
+
+.center{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+.navbar-nav a{
+    font-family: 'Poppins', sans-serif;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.nav-link{
+    transition: 0.3s;
+}
+
+.nav-link{
+    position: relative;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    transition: 0.3s;
+}
+
+.nav-link:hover{
+    color: black !important;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.nav-link::after{
+    content: "";
+    background: #FFBB37;
+    position: absolute;
+    top: 108%;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.nav-link:hover:after{
+    transition: 0.3s;
+    content: "";
+    background: #FFBB37;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 117%;
+    width: 100%;
+    z-index: -1;
+}
+
+.active{
+    background-color:rgba(255, 187, 55, 0.5) !important;
+}
+
+.font-poppins{
+    font-family: 'Poppins', sans-serif;
+}
+
+.font-montserrat{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container h1{
+    font-weight: 900;
+    color: #FFBB37;
+    font-size: 55px;
+    margin: 0px;
+    line-height: 50px;
+}
+
+.container h2{
+    font-size: 35px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+}
+
+.container h3{
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 35px;
+    margin: 0px;
+}
+
+.container h4{
+    margin-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.container h4::after{
+    content: "";
+    position: relative;
+    background: white;
+    height: 1px;
+    top: 50%;
+    width: 300px;
+}
+
+.container p{
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 650px;
+    font-size: 23px;
+}
+
+.button-panel button{
+    background-color: #FFBB37;
+    width: 200px;
+}
+
+#homeImage{
+}
+
+#resume{
+    float: right;
+}
+
+#resume a{
+    border: 4px solid #FFBB37;
+}
+
+#resume a:after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    left: 0;
+    height: 0px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+#resume a:hover:after{
+    transition: 0.3s;
+    content: "";
+    background: #FFBB37;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    height: 100%;
+    width: 102%;
+    z-index: -1;
+}
+
+/* After 992px */
+@media (min-width: 992px) { 
+    .nav-link{
+        transform: translateX(-3%);
+    }
+
+    .container{
+        min-width: 80% !important;
+    }
+}
+
+/* Before 992px */
+@media(max-width: 992px) {
+    .nav-link{
+        float: right;
+        margin-bottom: 15px;
+    }
+
+    .navbar-nav{
+        margin-top: 15px;
+    }
+
+    #resume{
+        float: left;
+        width: 100%;
+    }
+
+    #resume a{
+        border: 0px !important;
+    }
+
+    #resume a:after{
+        content: "";
+        background: #FFBB37;
+        position: absolute;
+        top: 108%;
+        bottom: 0;
+        left: 0;
+        height: 4px;
+        width: 100%;
+        transition: 0.3s;
+    }
+
+    #resume a:hover:after{
+        transition: 0.3s;
+        content: "";
+        background: #FFBB37;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 117%;
+        width: 100%;
+        z-index: -1;
+    }
+}
+
+svg #w{
+    opacity: 0;
+}
+
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+
+#logo svg{
+    height: 50px;
+    width: 50px !important;
+    transition: 0.5s;
+}
+
+#logo svg:hover{
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+#logo svg:hover #hexagon{
+    transition: 0.3s;
+    fill:rgba(255, 187, 55, 0.5) !important;
+}
+
+#logo svg:hover #w{
+    fill: black;
+    transition: 0.5s;
+}
