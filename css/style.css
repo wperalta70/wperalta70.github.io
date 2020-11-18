@@ -306,8 +306,16 @@ body{
         margin-top: 30px;
     }
 
-    .button-panel a:first-child{
-        margin-right: 50px;
+    .button-panel h3{
+        font-size: 20px;
+    }
+
+    .button-panel a{
+        margin: 0px 10px;
+    }
+
+    .primaryButton, .secondaryButton{
+        min-width: 150px !important;
     }
 }
 
@@ -343,39 +351,42 @@ svg #w{
     transition: 0.5s;
 }
 
-#code-svg{
-    width: 100px;
-    height: 75px;
-}
-
-#technologies-svg{
-    width: 100px;
-    height: 75px;
-}
-
-#contact-svg{
-    width: 100px;
-    height: 75px;
-}
-
 .button-panel{
     display: flex;
     justify-content: center;
     margin-top: 30px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .button-panel a{
     text-align: center;
-    color: rgba(255, 255, 255, 0.8);
+    color: white;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
 }
 
 .button-panel h3{
-    margin-top: 5px;
-    font-weight: bold;
     text-align: center !important;
+    margin: 0px;
+}
+
+.primaryButton{
+    border: 3px solid #FFBB37;
+    background-color: rgba(255, 187, 55, 0.6);
+    padding: 10px 0px;
+    border-radius: 3px;
+    width: 220px;
+}
+
+.secondaryButton{
+    background-color: transparent;
+    border-radius: 3px;
+    padding: 10px 0px;
+    border: 3px solid #FFBB37;
+    width: 220px;
+}
+
+.primaryButton:hover, .secondaryButton:hover{
+    border: 3px solid black;
 }
