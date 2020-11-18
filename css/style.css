@@ -1,16 +1,17 @@
 body{
-    background-color: #012b36;
+    background-color: #015367;
     /* original background: #015367 */
     /* alternate background 1: #161A22;*/
     /* alternate background 2: #202833;*/
     /* alternate background 3: #303E51 */
+    /* alternate background 4: #012b36  */
     /* alternate highlights color: #66FDF2 */
 }
 
-.content{
+/* .content-homepage{
     display: none;
     opacity: 0;
-}
+} */
 
 .center{
     position: fixed;
@@ -79,33 +80,37 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-.container h1{
+#greeting{
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 35px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#name{
     font-weight: 900;
     color: #FFBB37;
     font-size: 55px;
     margin: 0px;
     line-height: 50px;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.container h2{
+#web-dev{
     font-size: 35px;
     color: rgba(255, 255, 255, 0.8);
     font-weight: bold;
+    font-family: 'Poppins', sans-serif;
 }
 
-.container h3{
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 35px;
-    margin: 0px;
-}
-
-.container h4{
+#about-me{
     margin-top: 30px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+    margin-bottom: 0px;
 }
 
-.container h4::after{
+#about-me::after{
     content: "";
     position: relative;
     background: white;
@@ -114,20 +119,20 @@ body{
     width: 300px;
 }
 
-.container p{
+.text-col p{
     margin-top: 20px;
     font-family: 'Poppins', sans-serif;
     color: rgba(255, 255, 255, 0.6);
-    max-width: 650px;
     font-size: 23px;
 }
 
-.button-panel button{
-    background-color: #FFBB37;
-    width: 200px;
+.text-col p:first-of-type{
+    margin-top: 0px;
 }
 
-#homeImage{
+.text-col .button-panel button{
+    background-color: #FFBB37;
+    width: 200px;
 }
 
 #resume{
@@ -161,6 +166,15 @@ body{
     z-index: -1;
 }
 
+.text-col{
+    min-height: 70vh;
+    margin-top: 150px;
+}
+
+.illustration-col{
+    margin-top: 100px;
+}
+
 /* After 992px */
 @media (min-width: 992px) { 
     .nav-link{
@@ -169,6 +183,14 @@ body{
 
     .container{
         min-width: 80% !important;
+    }
+
+    #homeImage{
+    }
+
+    .button-panel a{
+        text-align: center;
+        margin-right: 100px;
     }
 }
 
@@ -215,6 +237,78 @@ body{
         width: 100%;
         z-index: -1;
     }
+
+    #homeImage{
+        width: 90vw;
+        /*margin-top: -100vh;*/
+        opacity: 0.2;
+    }
+
+    .text-col{
+        min-height: 80vh;
+        margin-top: 10px;
+    }
+
+    .illustration-col{
+        /*margin-top: 10px;*/
+        z-index: -1;
+        position: absolute;
+        top: 8%;
+    }
+
+    #greeting{
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 20px;
+        margin: 0px;
+    }
+
+    #name{
+        font-weight: 900;
+        color: #FFBB37;
+        font-size: 45px;
+        margin: 0px;
+        line-height: 50px;
+    }
+    
+    #web-dev{
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: normal;
+    }
+    
+    #about-me{
+        margin-top: 50px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #FFBB37;
+    }
+    
+    #about.me::after{
+        content: "";
+        position: relative;
+        background: white;
+        height: 1px;
+        top: 50%;
+        width: 300px;
+    }
+    
+    .text-col p{
+        margin-top: 10px;
+        font-family: 'Poppins', sans-serif;
+        color: rgba(255, 255, 255, 0.8);
+        max-width: 650px;
+        font-size: 18px;
+    }
+
+    .button-panel{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .button-panel a:first-child{
+        margin-right: 50px;
+    }
 }
 
 svg #w{
@@ -224,8 +318,8 @@ svg #w{
 .loader {
     position: absolute;
     left: 50%;
-    top: 30%;
-    transform: translate(-50%, -50%);
+    top: 40%;
+    transform: translate(-50%, -50%) !important;
 }
 
 #logo svg{
@@ -247,4 +341,41 @@ svg #w{
 #logo svg:hover #w{
     fill: black;
     transition: 0.5s;
+}
+
+#code-svg{
+    width: 100px;
+    height: 75px;
+}
+
+#technologies-svg{
+    width: 100px;
+    height: 75px;
+}
+
+#contact-svg{
+    width: 100px;
+    height: 75px;
+}
+
+.button-panel{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.button-panel a{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+.button-panel h3{
+    margin-top: 5px;
+    font-weight: bold;
+    text-align: center !important;
 }

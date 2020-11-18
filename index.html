@@ -11,24 +11,14 @@
     <title>Waldemar Peralta - Portfolio</title>
 </head>
 <body>
-    <!-- <svg id="preloader" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-    width="500px" height="800px">
-        <path class="path" stroke="#16A18A" stroke-width="8" d="M205,103 264.756,137.5 264.756,206.5 	205,241 145.244,206.5 145.244,137.5Z" stroke-linecap="round" fill="none" stroke-linejoin="round" />
-        <path class="d-flex justify-content-center align-items-center" stroke="#FFBB37" stroke-width="8" d="M205,103 264.756,137.5 264.756,206.5 	205,241 145.244,206.5 145.244,137.5Z" stroke-linecap="round" fill="none" stroke-linejoin="round" />
-    </svg> -->
-
-    <div class="loader">
-        <!-- <svg width="128" height="146" viewBox="0 0 128 146" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path id="hexagon" d="M63.756 4L123.512 38.5V107.5L63.756 142L4 107.5V38.5L63.756 4Z" stroke="#FFBB37" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-            <path id="w" d="M106.012 49.896L84.3403 99.648H79.0843L63.9643 67.608L48.7723 99.648H43.5163L21.9163 49.896H34.8763L46.4683 77.04L59.0683 49.896H69.0763L81.3883 77.04L93.0523 49.896H106.012Z" fill="#FFBB37"/>
-        </svg> -->
+    <!-- <div class="loader">
         <svg width="128" height="146" viewBox="0 0 128 146" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path id="hexagon" d="M63.76 4L4 38.5V107.5L63.76 142L123.51 107.5V38.5L63.76 4Z" stroke="#FFBB37" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
             <path id="w" d="M106 49.9L84.34 99.65H79.08L64 67.61L48.81 99.61H43.52L21.92 49.9H34.92L46.47 77L59.07 49.9H69.07L81.39 77L93.05 49.9H106Z" fill="#FFBB37"/>
         </svg>
-    </div>
+    </div> -->
 
-    <div class="content">
+    <div class="content-homepage">
         <nav class="navbar navbar-expand-md navbar-dark">
             <a id="logo" class="navbar-brand" href="https://github.com/wperalta1">
                 <svg width="128" height="146" viewBox="0 0 128 146" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,20 +44,46 @@
     
         <div class="container">
             <div class="row">
-                <div class="col-md-6 text-left text-white" style="min-height: 70vh; margin-top: 150px;">
+                <div class="text-col col-md-6 text-left text-white">
                     <!-- <img src="img/home2.png"> -->
-                    <h3 class="text-left font-poppins">Hi, my name is</h3>
-                    <h1 class="text-left font-montserrat">WALDEMAR PERALTA.</h1>
-                    <h2 class="text-left font-poppins">WEB DEVELOPER</h2>
-                    <h4>ABOUT ME</h4>
+                    <h3 id="greeting" class="text-left">Hi, my name is</h3>
+                    <h1 id="name" class="text-left">WALDEMAR PERALTA.</h1>
+                    <h2 id="web-dev" class="text-left">SOFTWARE DEVELOPER</h2>
+                    <h4 id="about-me">ABOUT ME</h4>
                     <p>I'm a junior software developer based in Argentina, whose passion is to learn and experiment with new technologies.</p>
                     <p>I enjoy creating things for the internet - from websites to applications, and anything in between.</p>
                     <div class="button-panel">
-                        <a role="button" class="btn btn-warning">View Projects</a>
-                        <a class="btn btn-warning">Contact me</a>
+                            <a href="projects.html">
+                                <svg id="code-svg" width="512" height="370" viewBox="0 0 512 370" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="code">
+                                        <path id="Vector" d="M474.5 0.5H448.239C444.096 0.5 440.739 3.857 440.739 8C440.739 12.143 444.096 15.5 448.239 15.5H474.5C486.906 15.5 497 25.594 497 38V72.5H15V38C15 25.594 25.093 15.5 37.5 15.5H415.309C419.452 15.5 422.809 12.143 422.809 8C422.809 3.857 419.452 0.5 415.309 0.5H37.5C16.822 0.5 0 17.322 0 38V120.681C0 124.824 3.358 128.181 7.5 128.181C11.642 128.181 15 124.824 15 120.681V87.5H497V280.866C497 285.009 500.357 288.366 504.5 288.366C508.643 288.366 512 285.009 512 280.866V38C512 17.322 495.178 0.5 474.5 0.5V0.5Z" fill="#FFBB37"/>
+                                        <path id="Vector_2" d="M504.5 304.994C500.357 304.994 497 308.351 497 312.494V332C497 344.406 486.906 354.5 474.5 354.5H37.5C25.093 354.5 15 344.406 15 332V152.867C15 148.724 11.642 145.367 7.5 145.367C3.358 145.367 0 148.724 0 152.867V332C0 352.678 16.822 369.5 37.5 369.5H474.5C495.178 369.5 512 352.678 512 332V312.494C512 308.352 508.643 304.994 504.5 304.994Z" fill="#FFBB37"/>
+                                        <path id="Vector_3" d="M108.482 163.457C105.553 160.529 100.804 160.529 97.876 163.457L52.806 208.527C51.399 209.934 50.609 211.841 50.609 213.831C50.609 215.821 51.399 217.727 52.806 219.135L97.28 263.609C98.744 265.073 100.664 265.805 102.583 265.805C104.502 265.805 106.422 265.073 107.886 263.609C110.815 260.679 110.815 255.931 107.886 253.002L68.715 213.832L108.482 174.065C111.412 171.135 111.412 166.387 108.482 163.457V163.457Z" fill="#FFBB37"/>
+                                        <path id="Vector_4" d="M209.344 263.608C210.808 265.072 212.728 265.804 214.647 265.804C216.566 265.804 218.486 265.072 219.95 263.608L264.425 219.134C265.831 217.727 266.621 215.82 266.621 213.83C266.621 211.84 265.831 209.934 264.425 208.526L219.354 163.456C216.425 160.528 211.676 160.528 208.748 163.456C205.819 166.386 205.819 171.134 208.748 174.063L248.516 213.83L209.345 253C206.415 255.931 206.415 260.679 209.344 263.608V263.608Z" fill="#FFBB37"/>
+                                        <path id="Vector_5" d="M131.99 291.234C135.015 291.234 137.866 289.39 139.003 286.393L192.297 145.995C193.767 142.122 191.819 137.791 187.947 136.321C184.075 134.85 179.743 136.799 178.274 140.671L124.98 281.071C123.51 284.943 125.458 289.274 129.33 290.744C130.206 291.077 131.105 291.234 131.99 291.234V291.234Z" fill="#FFBB37"/>
+                                        <path id="Vector_6" d="M33.006 44.371C33.006 56.777 43.099 66.871 55.506 66.871C67.913 66.871 78.006 56.777 78.006 44.371C78.006 31.965 67.913 21.871 55.506 21.871C43.099 21.871 33.006 31.965 33.006 44.371V44.371ZM63.006 44.371C63.006 48.507 59.642 51.871 55.506 51.871C51.37 51.871 48.006 48.507 48.006 44.371C48.006 40.235 51.37 36.871 55.506 36.871C59.642 36.871 63.006 40.235 63.006 44.371Z" fill="#FFBB37"/>
+                                        <path id="Vector_7" d="M91.166 44.371C91.166 56.777 101.259 66.871 113.666 66.871C126.073 66.871 136.166 56.777 136.166 44.371C136.166 31.965 126.073 21.871 113.666 21.871C101.259 21.871 91.166 31.965 91.166 44.371V44.371ZM121.166 44.371C121.166 48.507 117.802 51.871 113.666 51.871C109.53 51.871 106.166 48.507 106.166 44.371C106.166 40.235 109.53 36.871 113.666 36.871C117.802 36.871 121.166 40.235 121.166 44.371Z" fill="#FFBB37"/>
+                                        <path id="Vector_8" d="M149.325 44.371C149.325 56.777 159.418 66.871 171.825 66.871C184.232 66.871 194.325 56.777 194.325 44.371C194.325 31.965 184.232 21.871 171.825 21.871C159.418 21.871 149.325 31.965 149.325 44.371V44.371ZM179.325 44.371C179.325 48.507 175.961 51.871 171.825 51.871C167.689 51.871 164.325 48.507 164.325 44.371C164.325 40.235 167.689 36.871 171.825 36.871C175.961 36.871 179.325 40.235 179.325 44.371Z" fill="#FFBB37"/>
+                                        <path id="Vector_9" d="M335.5 171.368H382.5C394.906 171.368 405 161.274 405 148.868C405 136.462 394.906 126.368 382.5 126.368H335.5C323.094 126.368 313 136.462 313 148.868C313 161.274 323.094 171.368 335.5 171.368ZM335.5 141.368H382.5C386.636 141.368 390 144.732 390 148.868C390 153.004 386.636 156.368 382.5 156.368H335.5C331.364 156.368 328 153.004 328 148.868C328 144.732 331.364 141.368 335.5 141.368Z" fill="#FFBB37"/>
+                                        <path id="Vector_10" d="M335.5 231.368H459.5C471.906 231.368 482 221.274 482 208.868C482 196.462 471.906 186.368 459.5 186.368H335.5C323.094 186.368 313 196.462 313 208.868C313 221.274 323.094 231.368 335.5 231.368ZM335.5 201.368H459.5C463.636 201.368 467 204.732 467 208.868C467 213.004 463.636 216.368 459.5 216.368H335.5C331.364 216.368 328 213.004 328 208.868C328 204.732 331.364 201.368 335.5 201.368Z" fill="#FFBB37"/>
+                                        <path id="Vector_11" d="M335.5 291.368H422.665C435.071 291.368 445.165 281.274 445.165 268.868C445.165 256.462 435.071 246.368 422.665 246.368H335.5C323.094 246.368 313 256.462 313 268.868C313 281.274 323.094 291.368 335.5 291.368ZM335.5 261.368H422.665C426.801 261.368 430.165 264.732 430.165 268.868C430.165 273.004 426.801 276.368 422.665 276.368H335.5C331.364 276.368 328 273.004 328 268.868C328 264.732 331.364 261.368 335.5 261.368Z" fill="#FFBB37"/>
+                                    </g>
+                                </svg>
+                                <h3>Projects</h3>
+                            </a>
+                            <a href="contact.html">
+                                <svg id="contact-svg" width="512" height="380" viewBox="0 0 512 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="contact">
+                                        <path id="Vector" d="M207.4 56.931C205.54 55.07 202.97 54 200.33 54C197.7 54 195.12 55.07 193.26 56.931C191.4 58.79 190.33 61.37 190.33 64C190.33 66.63 191.4 69.21 193.26 71.07C195.12 72.93 197.7 74 200.33 74C202.97 74 205.54 72.931 207.4 71.07C209.27 69.21 210.33 66.63 210.33 64C210.33 61.37 209.27 58.79 207.4 56.931Z" fill="#FFBB37"/>
+                                        <path id="Vector_2" d="M112.96 265.87C111.1 264.01 108.52 262.94 105.88 262.94C103.25 262.94 100.68 264.01 98.81 265.87C96.95 267.73 95.89 270.31 95.89 272.94C95.89 275.58 96.95 278.15 98.81 280.01C100.68 281.88 103.25 282.94 105.88 282.94C108.52 282.94 111.1 281.88 112.96 280.01C114.82 278.15 115.88 275.58 115.88 272.94C115.88 270.31 114.82 267.73 112.96 265.87Z" fill="#FFBB37"/>
+                                        <path id="Vector_3" d="M462 0H50C22.43 0 0 22.43 0 50V330C0 357.57 22.43 380 50 380H462C489.57 380 512 357.57 512 330V50C512 22.43 489.57 0 462 0ZM450.803 20L416.803 54H241.254C235.731 54 231.254 58.478 231.254 64C231.254 69.522 235.731 74 241.254 74H396.803L368.803 102H294.827C289.304 102 284.827 106.478 284.827 112C284.827 117.522 289.304 122 294.827 122H348.803L299.902 170.901C275.694 195.108 236.306 195.108 212.098 170.901L61.197 20H450.803ZM462 360H50C45.065 360 40.408 358.794 36.297 356.674L83.926 309.045C87.831 305.14 87.831 298.808 83.926 294.903C81.973 292.95 79.414 291.974 76.855 291.974C74.296 291.974 71.736 292.951 69.784 294.903L22.567 342.12C20.922 338.411 20 334.312 20 330V50C20 38.39 26.634 28.307 36.306 23.322C36.517 23.58 36.743 23.831 36.984 24.072L188.8 175.887L125.654 239.033C121.749 242.938 121.749 249.27 125.654 253.176C129.559 257.082 135.891 257.081 139.797 253.176L203.171 189.801C233.602 215.436 278.399 215.436 308.831 189.801L475.704 356.675C471.592 358.794 466.935 360 462 360ZM492 330C492 334.312 491.078 338.411 489.433 342.12L323.201 175.886L475.017 24.071C475.258 23.83 475.483 23.58 475.695 23.321C485.366 28.307 492 38.39 492 50V330Z" fill="#FFBB37"/>
+                                    </g>
+                                </svg>
+                                <h3>Contact</h3>
+                            </a>
                     </div>
                 </div>
-                <div class="col-md-6 text-center text-white" style="margin-top: 100px;">
+                <div class="illustration-col col-md-6 text-center text-white">
                     <img id="homeImage" src="img/home6.png">
                 </div>
             </div>
@@ -78,43 +94,43 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="js/anime.min.js"></script>
     <script>
-        $(document).ready(function () {
-            // Create an animation timeline
-            var tl = anime.timeline({});
+        // $(document).ready(function () {
+        //     // Create an animation timeline
+        //     var tl = anime.timeline({});
 
-            // Add children
-            tl
-            .add({
-                targets: '#hexagon',
-                delay: 300,
-                duration: 1500,
-                easing: 'easeInOutQuart',
-                strokeDashoffset: [anime.setDashoffset, 0]
-            })
-            .add({
-                targets: 'svg #w',
-                duration: 700,
-                easing: 'easeInOutQuart',
-                opacity: 1
-            })
-            .add({
-                targets: '.loader',
-                delay: 500,
-                duration: 500,
-                easing: 'easeInOutQuart',
-                opacity: 0,
-                scale: 0.1
-            })
-            .add({
-                targets: '.content',
-                duration: 500,
-                easing: 'easeInOutQuart',
-                opacity: 1,
-                begin: function() {
-                    document.querySelector('.content').style.display = 'block';
-                }
-            })
-        });
+        //     // Add children
+        //     tl
+        //     .add({
+        //         targets: '#hexagon',
+        //         delay: 300,
+        //         duration: 1500,
+        //         easing: 'easeInOutQuart',
+        //         strokeDashoffset: [anime.setDashoffset, 0]
+        //     })
+        //     .add({
+        //         targets: 'svg #w',
+        //         duration: 700,
+        //         easing: 'easeInOutQuart',
+        //         opacity: 1
+        //     })
+        //     .add({
+        //         targets: '.loader',
+        //         delay: 500,
+        //         duration: 500,
+        //         easing: 'easeInOutQuart',
+        //         opacity: 0,
+        //         scale: 0.1
+        //     })
+        //     .add({
+        //         targets: '.content-homepage',
+        //         duration: 500,
+        //         easing: 'easeInOutQuart',
+        //         opacity: 1,
+        //         begin: function() {
+        //             document.querySelector('.content-homepage').style.display = 'block';
+        //         }
+        //     })
+        // });
     </script>
 </body>
 </html>
