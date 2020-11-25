@@ -1,5 +1,7 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700;800&display=swap');
 
 body{
     background-color: #015367;
@@ -30,10 +32,6 @@ body{
 }
 
 .nav-link{
-    transition: 0.3s;
-}
-
-.nav-link{
     position: relative;
     padding-left: 20px !important;
     padding-right: 20px !important;
@@ -42,7 +40,6 @@ body{
 
 .nav-link:hover{
     color: black !important;
-    transition: 0.3s;
     font-weight: bold;
 }
 
@@ -480,14 +477,32 @@ svg #w{
     z-index: 1;
 }
 
+.project-title{
+    color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    font-weight: bold;
+    font-size: 2rem;
+    transition: 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.project-title:hover{
+    color: white;
+    transition: 0.3s;
+    /*cursor: pointer;*/
+}
+
 .project-description{
-    background-color: rgba(2, 43, 54, 0.8);
+    /*background-color: rgba(2, 43, 54, 0.8);*/
+    background-color: #023340;
     border-radius: 3px;
     padding: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .project-description p{
     margin: 0px;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .left{
@@ -502,11 +517,14 @@ svg #w{
     list-style-type: none;
     margin: 20px 0px;
     padding: 0px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .project-tags li{
     display: inline;
     margin: 0px 5px;
+    font-family: 'Roboto Mono', monospace;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .project-links a{
@@ -515,10 +533,11 @@ svg #w{
     margin: 0px 10px;
     font-size: 1.5rem;
     transition: 0.3s;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .project-links a:hover{
-    color: #FFBB37;
+    color: white;
 }
 
 .left .project-tags{
@@ -546,12 +565,12 @@ svg #w{
 }
 
 .left .content{
-    margin-right: -20%;
+    margin-right: -7%;
     text-align: left;
 }
 
 .right .content{
-    margin-left: -20%;
+    margin-left: -7%;
     text-align: right;
 }
 
@@ -574,21 +593,35 @@ svg #w{
     text-align: right;
 }
 
-.project-title{
-    font-family: 'Poppins', sans-serif;
+.project-tags li:hover{
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
 }
 
-.project-description{
-    font-family: 'Poppins', sans-serif;
+.project-title:before{
+    content: "";
+    position: absolute;
+    background: #FFBB37;
+    height: 5px;
+    width: 20px;
+    top: 50%;
 }
 
-.project-tags{
-    font-family: 'Poppins', sans-serif;
+.left .project-title{
+    margin-left: 30px;
 }
 
-.preview a{
-    min-height: 100% !important;
-    min-width: 100% !important;
+.left .project-title:before{
+    left: -30px;
+}
+
+.right .project-title{
+    margin-right: 30px;
+}
+
+.right .project-title:before{
+    right: -30px;
 }
 
 @media(max-width: 768px) {
@@ -621,6 +654,10 @@ svg #w{
         text-align: left !important;
     }
 
+    .project-description{
+        text-align: left !important;
+    }
+
     .project-tags{
         text-align: left !important;
     }
@@ -628,14 +665,60 @@ svg #w{
     .project-links{
         text-align: left !important;
     }
+
+    .project-title{
+        margin-left: 30px;
+    }
+
+    .project-title:before{
+        left: -30px !important;
+    }
 }
 
 @media(max-width: 576px) {
+    .project{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
     .title h1{
         font-size: 4rem !important;
     }
 
     .title p{
         font-size: 1.5rem;
+    }
+
+    .project-title{
+        color: rgba(255, 255, 255, 1);
+    }
+
+    .project-tags li{
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .project-links a{
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 2rem;
+    }
+
+    .project-links a:not(:last-of-type){
+        margin-right: 15px !important;
+    }
+
+    .content{
+        margin-top: 0px;
+        padding-top: 10px !important;
+    }
+
+    .project-description{
+        background-color: rgb(2, 51, 64, 0.4);
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .project{
+        padding-left: 0px;
+        padding-right: 0px;
     }
 }
