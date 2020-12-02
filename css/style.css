@@ -13,6 +13,10 @@ body{
     /* alternate highlights color: #66FDF2 */
 }
 
+::selection {
+    background: #FFBB37;
+}
+
 .content-homepage{
     display: none;
     opacity: 0;
@@ -594,7 +598,6 @@ svg #w{
 }
 
 .project-tags li:hover{
-    cursor: pointer;
     color: white;
     transition: 0.3s;
 }
@@ -721,4 +724,141 @@ svg #w{
         padding-left: 0px;
         padding-right: 0px;
     }
+}
+
+@media(min-width: 992px) {
+    #contact-container{
+        min-width: 70vw;
+    }
+}
+
+/* || Start of contact css */
+#contactForm{
+    color: white;
+}
+
+#contactForm h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#contactForm ::placeholder{
+    color: rgb(255, 255, 255, 0.4);
+}
+
+#contactForm input, #contactForm textarea{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 16px;
+    background-color: #1B6576;
+    border-color: #1d7b91;
+    height: 100%;
+    width: 100%;
+    padding: 0.75rem 0.95rem !important;
+}
+
+#btnSubmit{
+    background-color: #1d89a1;
+    border-color: #1d89a1;
+    padding: 0.8rem 2.6rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+#btnSubmit:hover{
+    background-color: #1b7c92;
+}
+
+#contactInfo h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+#contactInfo p{
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255,255,255,0.6);
+    margin: 5px 0px 10px 10px;
+    transition: 0.3s;
+}
+
+#contactInfo p:hover{
+    color: white;
+}
+
+#contactInfo p:hover i{
+    color: white;
+}
+
+#contactInfo i{
+    color: #1D89A1;
+    font-size: 1.2rem;
+    text-align: center !important;
+    transition: 0.3s;
+}
+
+#contactInfo a p{
+    margin: 0px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#contactInfo a p:nth-of-type(2), #contactInfo a p:nth-of-type(4){
+    border-bottom: 1px solid rgb(255, 255, 255, 0.4);
+}
+
+#contactInfo a p span{
+    transition: 0.3s;
+}
+
+#contactInfo a:hover p{
+    background-color: #1B6576;
+}
+
+#contactInfo a:hover .item{
+    transform: translateX(10px);
+}
+
+#contactInfo .item{
+    font-weight: 700;
+}
+
+/* Modal css */
+.modal-content{
+    background-color: #015367;
+    color: white;
+}
+
+#contactModal input, #contactModal textarea{
+    background-color: #1B6576;
+    border-color: #1d7b91;
+    color: white;
+}
+
+.modal-header{
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+.modal-footer{
+    border-top: 1px solid rgba(255,255,255,0.4);
+}
+
+.modal-title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+#contactModal .modal-body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.errorClass{
+    color: rgb(255, 79, 79);
+}
+
+.is-invalid{
+    border: 1px solid rgb(255, 79, 79) !important;
 }
