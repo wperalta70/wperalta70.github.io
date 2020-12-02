@@ -1,7 +1,8 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700;800');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700;800');
 
 body{
     background-color: #015367;
@@ -526,25 +527,42 @@ svg #w{
 
 .project-tags li{
     display: inline;
-    margin: 0px 5px;
+    margin: 5px 5px 0px 5px !important;
     font-family: 'Courier Prime', monospace;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.6);
     padding: 4px 10px;
-    background-color: rgba(2, 51, 64, 0.4);
+    background-color: rgba(2, 51, 64, 0.8);
     border-radius: 3px;
+    display: inline-block;
+    transition: 0.3s;
 }
 
 .project-links a{
-    text-decoration: none !important;
-    color: white;
-    margin: 0px 10px;
-    font-size: 1.5rem;
-    transition: 0.3s;
-    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Roboto Mono', sans-serif;
+    padding: 8px 15px;
+    border-radius: 0px;
+    border-width: 3px;
+    font-weight: 700;
+    border-color: #FFBB37;
+    font-size: 0.9rem;
 }
 
-.project-links a:hover{
+.project-links #btnDemo{
+    background-color: rgb(255, 187, 55, 1);
+}
+
+.project-links #btnCode{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.project-links #btnDemo:hover{
+    background-color: transparent;
     color: white;
+}
+
+.project-links #btnCode:hover{
+    color: black;
+    background-color: rgb(255, 187, 55, 1);
 }
 
 .left .project-tags{
@@ -555,8 +573,18 @@ svg #w{
     text-align: right;
 }
 
+.preview{
+    overflow: hidden;
+    border-radius: 10px;
+}
+
 .project-img {
     width: 100%;
+    transition: 0.5s;
+}
+
+.project-img:hover{
+    transform: scale(1.05);
 }
 
 .project .col-md-6{
@@ -585,13 +613,6 @@ svg #w{
     list-style-type: none;
     margin: 20px 0px;
     padding: 0px;
-}
-
-.project-tags li{
-    display: inline-block;
-    margin: 0px 5px;
-    transition: 0.3s;
-
 }
 
 .left .project-tags{
@@ -706,15 +727,6 @@ svg #w{
         color: rgba(255, 255, 255, 0.8);
     }
 
-    .project-links a{
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 2rem;
-    }
-
-    .project-links a:not(:last-of-type){
-        margin-right: 15px !important;
-    }
-
     .content{
         margin-top: 0px;
         padding-top: 10px !important;
@@ -735,6 +747,14 @@ svg #w{
 @media(min-width: 992px) {
     #contact-container{
         min-width: 70vw;
+    }
+
+    .left .project-title:hover{
+        transform: translateX(10px);
+    }
+
+    .right .project-title:hover{
+        transform: translateX(-10px);
     }
 }
 
