@@ -354,6 +354,10 @@ svg #w{
     opacity: 0;
 }
 
+.loader #hexagon{
+    opacity: 0;
+}
+
 .loader {
     position: absolute;
     left: 50%;
@@ -535,6 +539,14 @@ svg #w{
     border-radius: 3px;
     display: inline-block;
     transition: 0.3s;
+}
+
+.left .project-tags li:first-of-type{
+    margin-left: 0px !important;
+}
+
+.right .project-tags li:last-of-type{
+    margin-right: 0px !important;
 }
 
 .project-links a{

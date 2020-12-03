@@ -14,7 +14,7 @@
 <body>
     <div class="loader">
         <svg width="128" height="146" viewBox="0 0 128 146" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path id="hexagon" d="M63.76 4L4 38.5V107.5L63.76 142L123.51 107.5V38.5L63.76 4Z" stroke="#FFBB37" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path stroke-dashoffset="1000" id="hexagon" d="M63.76 4L4 38.5V107.5L63.76 142L123.51 107.5V38.5L63.76 4Z" stroke="#FFBB37" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
             <path id="w" d="M106 49.9L84.34 99.65H79.08L64 67.61L48.81 99.61H43.52L21.92 49.9H34.92L46.47 77L59.07 49.9H69.07L81.39 77L93.05 49.9H106Z" fill="#FFBB37"/>
         </svg>
     </div>
@@ -48,11 +48,11 @@
                 <div class="text-col col-md-6 text-left text-white">
                     <span data-aos="fade-up" id="greeting" class="1 animate text-left">HELLO !</span>
                     <h1 data-aos="fade-up" id="name" class="2 text-left"><span></span>WALDEMAR PERALTA.</h1>
-                    <h2 data-aos="fade-up" id="web-dev" class="3 text-left">SOFTWARE DEVELOPER</h2>
-                    <h4 data-aos="fade-right" id="about-me" class="4">ABOUT ME</h4>
-                    <p data-aos="fade-right" class="4">I'm a junior software developer based in Argentina, whose passion is to learn and experiment with new technologies.</p>
-                    <p data-aos="fade-right" class="4">I enjoy creating things for the internet - from websites to applications, and anything in between.</p>
-                    <div data-aos="fade-right" class="5 button-panel">
+                    <h2 data-aos="fade-up" id="web-dev" class="2 text-left">SOFTWARE DEVELOPER</h2>
+                    <h4 data-aos="fade-right" id="about-me" class="3">ABOUT ME</h4>
+                    <p data-aos="fade-right" class="3">I'm a junior software developer based in Argentina, whose passion is to learn and experiment with new technologies.</p>
+                    <p data-aos="fade-right" class="3">I enjoy creating things for the internet - from websites to applications, and anything in between.</p>
+                    <div data-aos="fade-right" class="3 button-panel">
                             <a class="animate primaryButton btn btn-warning" href="portfolio.html">
                                 <h3>Portfolio</h3>
                             </a>
@@ -61,7 +61,7 @@
                             </a>
                     </div>
                 </div>
-                <div data-aos="fade-left" data-aos-delay="1800" class="illustration-col col-md-6 text-center text-white">
+                <div data-aos="fade-left" class="4 illustration-col col-md-6 text-center text-white">
                     <img id="homeImage" src="img/home6.png">
                 </div>
             </div>
@@ -75,69 +75,91 @@
     <script src="libraries/aos/aos.js"></script>
     <script>
         $(document).ready(function () {
-            // Create an animation timeline
-            var tl = anime.timeline({});
+            if (window.sessionStorage.getItem('logoAnimated') === null) {
+                // Create an animation timeline
+                var tl = anime.timeline({});
 
-            // Add children
-            tl
-            .add({
-                targets: '#hexagon',
-                delay: 300,
-                duration: 1500,
-                easing: 'easeInOutQuart',
-                strokeDashoffset: [anime.setDashoffset, 0]
-            })
-            .add({
-                targets: 'svg #w',
-                duration: 700,
-                easing: 'easeInOutQuart',
-                opacity: 1
-            })
-            .add({
-                targets: '.loader',
-                delay: 500,
-                duration: 500,
-                easing: 'easeInOutQuart',
-                opacity: 0,
-                scale: 0.1
-            })
-            .add({
-                targets: '.content-homepage',
-                duration: 500,
-                easing: 'easeInOutQuart',
-                opacity: 1,
-                begin: function() {
-                    document.querySelector('.content-homepage').style.display = 'block';
-                }
-            })
-            .add({
-                begin: function(){
-                    var delay = 0;
-                    $('.nav-link').each(function() {
-                        if ($(this).visible(true, true)) {
-                            delay = delay + 150;
-                            $(this).attr('data-aos-delay', delay);
-                        }
-                    });
+                // Add children
+                tl
+                .add({
+                    targets: '#hexagon',
+                    duration: 100,
+                    easing: 'easeInOutQuart',
+                    opacity: 1
+                })
+                .add({
+                    targets: '#hexagon',
+                    delay: 300,
+                    duration: 1500,
+                    easing: 'easeInOutQuart',
+                    strokeDashoffset: [anime.setDashoffset, 0]
+                })
+                .add({
+                    targets: 'svg #w',
+                    duration: 700,
+                    easing: 'easeInOutQuart',
+                    opacity: 1
+                })
+                .add({
+                    targets: '.loader',
+                    delay: 500,
+                    duration: 500,
+                    easing: 'easeInOutQuart',
+                    opacity: 0,
+                    scale: 0.1,
+                    zIndex: -1
+                })
+                .add({
+                    targets: '.content-homepage',
+                    duration: 500,
+                    easing: 'easeInOutQuart',
+                    opacity: 1,
+                    begin: function() {
+                        $('.content-homepage').attr("style", "display:block");
+                        // document.querySelector('.content-homepage').style.display = 'block';
+                    }
+                })
+                .add({
+                    begin: function(){
+                        var delay = 0;
+                        $('.nav-link').each(function() {
+                            if ($(this).visible(true, true)) {
+                                delay = delay + 150;
+                                $(this).attr('data-aos-delay', delay);
+                            }
+                        });
 
-                    var delay2 = delay;
-                    $('.1').attr('data-aos-delay', delay2 + 300);
-                    $('.2').attr('data-aos-delay', delay2 + 450);
-                    $('.3').attr('data-aos-delay', delay2 + 600);
-                    $('.4').attr('data-aos-delay', delay2 + 1000);
-                    $('.5').attr('data-aos-delay', delay2 + 1300);
+                        var delay2 = delay;
+                        $('.1').attr('data-aos-delay', delay2 + 300);
+                        $('.2').attr('data-aos-delay', delay2 + 600);
+                        $('.3').attr('data-aos-delay', delay2 + 1000);
+                        $('.4').attr('data-aos-delay', delay2 + 1600);
 
+                        AOS.init({
+                            duration: 1000,
+                            once: true,
+                            anchorPlacement: 'top-bottom'
+                        });
+                    }
+                });
+                
+                window.sessionStorage.setItem('logoAnimated', 1);
+            }else{
+                $('.content-homepage').attr("style", "display:block; opacity: 1;");
+                $('.loader').attr("style", "opacity: 0; z-index: -1;");
 
+                var delay2 = 0;
+                $('.1').attr('data-aos-delay', delay2 + 300);
+                $('.2').attr('data-aos-delay', delay2 + 600);
+                $('.3').attr('data-aos-delay', delay2 + 1000);
+                $('.4').attr('data-aos-delay', delay2 + 1600);
 
-                    console.log(delay);
-
-                    AOS.init({
-                        duration: 1000,
-                        once: true,
-                        anchorPlacement: 'top-bottom'
-                    });
-                }
-            });
+                AOS.init({
+                    duration: 1000,
+                    once: true,
+                    anchorPlacement: 'top-bottom'
+                });
+            }
         });
 
         //console.log(delay);
