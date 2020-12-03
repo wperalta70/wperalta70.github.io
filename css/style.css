@@ -161,11 +161,6 @@ body{
     margin-top: 0px;
 }
 
-.text-col .button-panel button{
-    background-color: #FFBB37;
-    width: 200px;
-}
-
 #resume{
     float: right;
 }
@@ -214,14 +209,6 @@ body{
 
     #home-container{
         min-width: 80% !important;
-    }
-
-    #homeImage{
-    }
-
-    .button-panel a{
-        text-align: center;
-        margin-right: 100px;
     }
 }
 
@@ -308,17 +295,17 @@ body{
     #about-me{
         margin-top: 50px;
         font-size: 20px;
-        font-weight: 600;
         color: #FFBB37;
         position: relative;
+        padding-left: 40px;
     }
     
     #about-me:before{
         content: "";
         position: absolute;
         background-color: #FFBB37;
-        height: 2px;
-        top: 0px;
+        height: 3px;
+        top: 10px;
         left: 0px;
         width: 30px;
     }
@@ -331,22 +318,9 @@ body{
         font-size: 18px;
     }
 
-    .button-panel{
-        display: flex;
-        justify-content: center;
-        margin-top: 30px;
-    }
-
-    .button-panel h3{
-        font-size: 20px;
-    }
-
     .button-panel a{
-        margin: 0px 10px;
-    }
-
-    .primaryButton, .secondaryButton{
-        min-width: 150px !important;
+        font-size: 1.1rem !important;
+        padding: 5px 15px !important;
     }
 }
 
@@ -372,7 +346,7 @@ svg #w{
 }
 
 #logo svg:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: 0.3s;
 }
 
@@ -381,49 +355,37 @@ svg #w{
     fill:rgba(255, 187, 55, 0.5) !important;
 }
 
-#logo svg:hover #w-logo{
-    fill: black;
-    transition: 0.5s;
-}
-
 .button-panel{
     display: flex;
-    justify-content: center;
     margin-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
 }
 
 .button-panel a{
     text-align: center;
     color: white;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-}
-
-.button-panel h3{
-    text-align: center !important;
-    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border-radius: 0px;
+    margin-right: 20px;
 }
 
 .primaryButton{
     border: 3px solid #FFBB37;
     background-color: rgba(255, 187, 55, 0.6);
-    padding: 10px 0px;
-    border-radius: 3px;
-    width: 220px;
 }
 
 .secondaryButton{
     background-color: transparent;
-    border-radius: 3px;
-    padding: 10px 0px;
     border: 3px solid #FFBB37;
-    width: 220px;
 }
 
 .primaryButton:hover, .secondaryButton:hover{
-    border: 3px solid black;
+    border: 3px solid #99914A;
+    background-color:#FFBB37;
 }
 /* || End of index css */
 
