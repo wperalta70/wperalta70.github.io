@@ -1,4 +1,6 @@
 /* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Monterrat:wght@400;600;900');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700');
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code');
@@ -413,6 +415,7 @@ svg #w{
     font-weight: bold;
     margin: 0px;
     user-select: none;
+    overflow: hidden;
 }
 
 .title p{
@@ -633,6 +636,7 @@ svg #w{
 @media(max-width: 768px) {
     .title h1{
         font-size: 5rem;
+        text-align: center;
     }
 
     .title p{
@@ -883,3 +887,69 @@ svg #w{
 
 
 /* || End of Footer css */
+
+
+
+/* || Start of technologies css */
+.technologies{
+
+}
+
+.technologies .col-md-4{
+    padding: 0.75rem !important;
+
+}
+
+.technologies .icon{
+    margin-bottom: 20px;
+}
+
+.technologies .icon i{
+    font-size: 50px;
+    color: #FFBB37;
+    transition: 0.3s ease-in-out;
+}
+
+.technologies .card{
+    height: 100%;
+    padding: 60px 45px;
+    background-color: #1B6576;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    color: red !important;
+    border-radius: 10px;
+}
+
+.technologies .card:hover{
+    transform: translateY(-10px);
+    /*background-color: #251a02;*/
+    transition: all 0.3s !important;
+    background-image: linear-gradient(135deg, #a76f01, #eca311);
+}
+
+.technologies .card:hover .icon i{
+    color: white !important;
+}
+
+.technologies .content h3{
+    font-weight: 500;
+}
+
+.technologies .content p{
+    color: rgb(255, 255, 255, 0.6);
+}
+
+.technologies .card:hover .content .p{
+    color: white !important;
+}
+
+/* 992px and above */
+@media(min-width: 992px) {
+
+}
+
+/* Mobile only */
+@media(max-width: 576px) {
+
+}
+/* || End of technologies css */
