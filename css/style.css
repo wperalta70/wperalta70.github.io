@@ -526,21 +526,21 @@ svg #w{
     font-size: 0.9rem;
 }
 
-.project-links #btnDemo{
+.project-links .btnDemo{
     color: white;
     background-color: rgb(255, 187, 55, 0.5);
 }
 
-.project-links #btnCode{
+.project-links .btnCode{
     color: rgba(255, 255, 255, 0.8);
 }
 
-.project-links #btnDemo:hover{
+.project-links .btnDemo:hover{
     background-color: transparent;
     color: white;
 }
 
-.project-links #btnCode:hover{
+.project-links .btnCode:hover{
     color: white;
     background-color: rgb(255, 187, 55, 0.5);
 }
