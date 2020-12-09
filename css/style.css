@@ -49,7 +49,6 @@ body{
 
 .nav-link:hover{
     color: black !important;
-    font-weight: bold;
 }
 
 .nav-link::after{
@@ -914,18 +913,37 @@ svg #w{
 .technologies .card{
     height: 100%;
     padding: 60px 45px;
-    background-color: #1B6576;
-    transition: all 0.3s ease-in-out;
+    /*background-color: #1B6576;*/
+    background-color: rgb(2, 51, 64, 0.8);
+    transition: 0.3s ease-in-out;
     font-family: 'Poppins', sans-serif;
     color: red !important;
-    border-radius: 10px;
+    border-radius: 5px;
+    position: relative;
+    border: 0px;
+}
+
+.technologies .card:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    opacity: 0;
+    background-image: linear-gradient(135deg, #a76f01, #eca311);
+    transition: 0.3s ease-in-out;
+    z-index: -1;
 }
 
 .technologies .card:hover{
     transform: translateY(-10px);
     /*background-color: #251a02;*/
-    transition: all 0.3s !important;
-    background-image: linear-gradient(135deg, #a76f01, #eca311);
+}
+
+.technologies .card:hover:after{
+    opacity: 1;
 }
 
 .technologies .card:hover .icon i{
@@ -938,10 +956,15 @@ svg #w{
 
 .technologies .content p{
     color: rgb(255, 255, 255, 0.6);
+    transition: 0.3s ease-in-out;
 }
 
-.technologies .card:hover .content .p{
+.technologies .card:hover .content p{
     color: white !important;
+}
+
+.technologies .content{
+    margin: 0px;
 }
 
 /* 992px and above */

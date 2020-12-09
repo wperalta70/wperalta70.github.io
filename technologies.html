@@ -46,51 +46,51 @@
 
             <div class="technologies">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div data-aos="fade-up" class="col-md-4">
                         <div class="card">
                             <div class="icon">
                                 <i class="fab fa-html5"></i>
                             </div>
                             <div class="content">
                                 <h3>HTML5</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, eius?</p>
+                                <p>Markup language used for defining and structuring web content.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div data-aos="fade-up" class="col-md-4">
                         <div class="card">
                             <div class="icon">
                                 <i class="fab fa-css3-alt"></i>
                             </div>
                             <div class="content">
                                 <h3>CSS3</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, eius?</p>
+                                <p>Style sheet language used to define the layout and style of HTML elements.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div data-aos="fade-up" class="col-md-4">
                         <div class="card">
                             <div class="icon">
                                 <i class="fab fa-js"></i>
                             </div>
                             <div class="content">
                                 <h3>Javascript</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, eius?</p>
+                                <p>Client-side programming language used to add interactivity to web pages.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div data-aos="fade-up" class="col-md-4">
                         <div class="card">
                             <div class="icon">
                                 <i class="fab fa-php"></i>
                             </div>
                             <div class="content">
                                 <h3>PHP</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, eius?</p>
+                                <p>Scripting language used for developing web applications.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div data-aos="fade-up" class="col-md-4">
                         <div class="card">
                             <div class="icon">
                                 <i class="fab fa-python"></i>
@@ -98,51 +98,62 @@
                             </div>
                             <div class="content">
                                 <h3>Python</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, eius?</p>
+                                <p>General-purpose programming language.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div data-aos="fade-up" class="col-md-4">
                         <div class="card">
                             <div class="icon">
                                 <i class="fab fa-react"></i>
                             </div>
                             <div class="content">
                                 <h3>React</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, eius?</p>
+                                <p>Front-end javascript library for building user interfaces and single-page applications.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div data-aos="fade-up" class="col-md-4">
                         <div class="card">
                             <div class="icon">
                                 <i class="fab fa-laravel"></i>
                             </div>
                             <div class="content">
                                 <h3>Laravel</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, eius?</p>
+                                <p>PHP framework that implements the MVC deign pattern. Used to speed the development of web applications.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div data-aos="fade-up" class="col-md-4">
+                        <div class="card">
+                            <div class="icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="content">
+                                <h3>Flask</h3>
+                                <p>Framework used for developing web applications with Python.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" class="col-md-4">
                         <div class="card">
                             <div class="icon">
                                 <i class="fas fa-database"></i>
                             </div>
                             <div class="content">
-                                <h3>MySQL</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, eius?</p>
+                                <h3>SQL</h3>
+                                <p>Structured query language used to communicate with databases.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div data-aos="fade-up" class="col-md-4">
                         <div class="card">
                             <div class="icon">
                                 <i class="fab fa-git-square"></i>
                             </div>
                             <div class="content">
                                 <h3>Git</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, eius?</p>
+                                <p>Version control software used for managing source code.</p>
                             </div>
                         </div>
                     </div>
@@ -163,8 +174,16 @@
     <script src="libraries/jquery.visible.min.js"></script>
     <script src="libraries/aos/aos.js"></script>
     <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip();
+        let delay = 0;
+        let delay2 = 0;
+        $('.col-md-4').each(function() {
+            if ($(this).visible(true, true)) {
+                delay = delay + 200;
+                $(this).attr('data-aos-delay', delay);
+            }else{
+                delay2 = delay2 + 200;
+                $(this).attr('data-aos-delay', delay2);
+            }
         });
 
         AOS.init({
@@ -172,15 +191,6 @@
             once: true,
             delay: 0,
             anchorPlacement: 'top-bottom'
-        });
-
-        let delay2 = 0;
-        console.log(delay2);
-        $('.animate').each(function() {
-            if ($(this).visible(true, true)) {
-                delay2 = delay2 + 300;
-                $(this).attr('data-aos-delay', delay2);
-            }
         });
     </script>
 </body>
