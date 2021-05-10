@@ -148,13 +148,13 @@
                 $('.loader').attr("style", "opacity: 0; z-index: -1;");
 
                 var delay2 = 0;
-                $('.1').attr('data-aos-delay', delay2 + 300);
-                $('.2').attr('data-aos-delay', delay2 + 600);
-                $('.3').attr('data-aos-delay', delay2 + 1000);
-                $('.4').attr('data-aos-delay', delay2 + 1600);
+                $('.1').attr('data-aos', '');
+                $('.2').attr('data-aos', '');
+                $('.3').attr('data-aos', '');
+                $('.4').attr('data-aos', '');
 
                 AOS.init({
-                    duration: 1000,
+                    duration: 0,
                     once: true,
                     anchorPlacement: 'top-bottom'
                 });
